@@ -39,6 +39,7 @@ TYPE=mysql
 							DRIVER=com.mysql.jdbc.Driver
 							URL='jdbc:mysql://<MACHINE_IP>:3306/artdb?characterEncoding=UTF-8&elideSetAutoCommits=true&useSSL=false'
 							DRIVERURL=https://dev.mysql.com/downloads/connector/j/
+							PASSWORD=password
                                     rm -fr /"$TYPE"-data
                                     mkdir -p /"$TYPE"-data
 									#This script is executed by the db when the container is created
