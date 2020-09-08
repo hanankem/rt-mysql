@@ -53,7 +53,6 @@ EOF
 
 									read -p "Please choose MySQL version version [5.5/5.6/5.7]:" VERS
 									docker run --name mysql-artifactory -e MYSQL_ROOT_PASSWORD=password -v /mysql-data:/var/lib/mysql -v /dbstart:/docker-entrypoint-initdb.d -p 3306:3306 -d mysql:"$VERS"
-rm -rf /dbstart
 echo $LINE
 
 									echo "Done"
