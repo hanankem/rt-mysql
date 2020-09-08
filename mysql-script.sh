@@ -11,7 +11,7 @@ exit
 fi
 lsb_release -a | grep Ubuntu > /dev/null
 if [[ $? != 0 ]]; then
-	echo "This script should be run on Ubuntu"
+	echo "This script should be used with Ubuntu"
 	exit
 fi
 
@@ -62,7 +62,7 @@ echo $LINE
 echo $LINE
 cat <<EOF >$HOME/snippet
 
-For Artifactory under 7.x use this and place it under /etc/db.properties
+For Artifactory under 7.x use this:
 
 type=$TYPE
 driver=$DRIVER
@@ -70,7 +70,7 @@ url=$URL
 username=artifactory
 password=$PASSWORD
 
-For artifactory 7 use this and place it under system.yaml
+For artifactory 7 use this:
 
 shared:
   database:
