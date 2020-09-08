@@ -2,7 +2,7 @@
 
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-LINE=######################################################
+LINE=#################################################################################
 #Check if runing as root
 if [ `whoami` != 'root' ];
 then
@@ -50,7 +50,7 @@ FLUSH PRIVILEGES;
 EOF
 
 
-									read -p "Please choose Postgres version version [5.5/5.6/5.7]:" VERS
+									read -p "Please choose MySQL version version [5.5/5.6/5.7]:" VERS
 									docker run --name mysql-artifactory -e MYSQL_ROOT_PASSWORD=password -v /mysql-data:/var/lib/mysql -v /dbstart:/docker-entrypoint-initdb.d -p 3306:3306 -d mysql:"$VERS"
 rm -rf /dbstart
 echo $LINE
